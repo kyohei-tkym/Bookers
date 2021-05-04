@@ -1,2 +1,38 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+  <body>
+    <h1>Bookes</h1>
+    <table>
+      <thhead>
+        <tr>
+          <th>Title</th>
+          <th>Body</th>
+        </tr>
+      </thhead>
+
+      <tbody>
+        <tr>
+          <td>リーダブルコード</td>
+          <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+          <td>show</td>
+          <td>edit</td>
+          <td>destroy</td>
+        </tr>
+      </tbody>
+
+    </table>
+    <div class="form">
+      <h2>New book</h2>
+      <%= form_with model:@book, local:true do |f| %>
+        <label>Title</label>
+          <div class="field">
+            <%= f.text_field :title %>
+          </div>
+        <label>Body</label>
+          <div class="field">
+            <%= f.text_area :body %>
+          </div>
+          <div class="submit">
+            <%= f.submit 'Create Book' %>
+          </div>
+      <% end %>
+    </div>
+  </body>
