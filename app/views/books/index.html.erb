@@ -1,3 +1,8 @@
+  <% if flash[:notice] %>
+    <p id="notice">
+      <%= flash[:notice] %>
+    </p>
+  <% end %>
   <body>
     <h1>Bookers</h1>
     <table>
