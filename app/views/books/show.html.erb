@@ -7,5 +7,5 @@
   <p><strong>Title:</strong><%= @book.title %></p>
   <p><strong>Body:</strong><%= @book.body %></p>
 
-  <a><%= link_to"Edit","/books/#{@book.id}/edit" %></a> | <a><%= link_to"Back","/books" %></a>
+  <%= link_to"Edit","/books/#{@book.id}/edit" %> | <%= link_to"Back","/books" %>
 </body>
